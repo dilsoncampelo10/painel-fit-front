@@ -1,7 +1,24 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
 import Navbar from '../../layouts/Navbar.vue';
 import Input from '../../ui/Input.vue';
 import LoginButton from '../../ui/LoginButton.vue';
+import { ref } from 'vue';
+import AuthService from '../../../services/AuthService';
+
+const router = useRouter()
+const email = ref('')
+const password = ref('')
+const errorMessage = ref(false)
+
+const login = async () => {
+  try {
+    await AuthService.login(email.value, password.value)
+    router.push('/') 
+  } catch (error) {
+    errorMessage.value = true
+  }
+}
 
 </script>
 
@@ -21,9 +38,10 @@ import LoginButton from '../../ui/LoginButton.vue';
                 </aside>
                 <main class="container">
                     <p class="login_description"><strong>Para acessar, informe suas credeciais.</strong></p>
-                    <Input type="email" placeholder="E-mail"/>
-                    <Input type="password" placeholder="Senha"/>
-                    <LoginButton/>
+                    <p class="login_description error" v-if="errorMessage">E-mail ou senha incorretos.</p>
+                    <Input v-model="email" type="email" placeholder="E-mail"/>
+                    <Input v-model="password" type="password" placeholder="Senha"/>
+                    <LoginButton @click="login" />
                 </main>
             </div>
         </div>
@@ -36,6 +54,10 @@ import LoginButton from '../../ui/LoginButton.vue';
         text-align: center;
         margin-top: 30px;
         
+    }
+    .error{
+        color: #dc2626;
+        font-weight: bold;
     }
     .aside_text{
         width: 100%;
