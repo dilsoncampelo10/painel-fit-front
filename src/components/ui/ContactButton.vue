@@ -1,6 +1,6 @@
 <template>
     <a href="" class="contact_link">
-        <img src="../../assets/icons/whatsapp.svg" class="logo" alt="Vite logo" />
+        <img src="../../assets/icons/whatsapp.svg" class="logo" alt="WhatsApp logo" />
         SAC pelo whatsapp
     </a>
 </template>
