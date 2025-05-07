@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
+import { RouterLink } from 'vue-router';
 
     const props = defineProps<{
         image: string,
@@ -12,12 +13,12 @@ import { computed } from 'vue';
 </script>
 
 <template>
-    <a href="" class="link_fit">
+    <RouterLink to="/treinos" class="link_fit">
         <div class="box_fit_links">
             <img class="box_img" :src="resolvedImage" alt="treinando">
             <h2 class="fit_title">{{ title }}</h2>
         </div>
-    </a>
+    </RouterLink>
 </template>
 
 <style scoped>
