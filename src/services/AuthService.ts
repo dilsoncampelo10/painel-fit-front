@@ -1,12 +1,16 @@
-import axios from 'axios'
-
-const API_URL = 'http://localhost:80/api'
+import api from './axios'
 
 export default {
   async login(email: string, password: string) {
-    const response = await axios.post(`${API_URL}/login`, { email, password })
+    const response = await api.post('/login', { email, password })
     localStorage.setItem('token', response.data.token)
-    axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`
+    localStorage.setItem('user', JSON.stringify(response.data.user))
     return response.data
   }
+}
+
+export async function logout() {
+  await api.delete('/logout')
+  localStorage.removeItem('token')
+  localStorage.removeItem('user')
 }

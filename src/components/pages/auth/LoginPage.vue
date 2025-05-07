@@ -62,6 +62,7 @@ const login = async () => {
     .aside_text{
         width: 100%;
         margin-bottom: -60px;
+        padding: 10px 30px;
     }
     .aside_text p{
         margin: 20px 0;
@@ -81,7 +82,7 @@ const login = async () => {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 30px;
+        padding: 30px 0;
         gap: 40px;
     }
     .box{
