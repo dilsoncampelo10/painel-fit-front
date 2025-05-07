@@ -4,6 +4,7 @@ import Navbar from '../layouts/Navbar.vue';
 import { ref, onMounted } from 'vue'
 import LinkFit from '../ui/LinkFit.vue';
 import CardFit from '../ui/CardFit.vue';
+import Footer from '../layouts/Footer.vue';
 
 const userName = ref('')
 
@@ -34,6 +35,7 @@ onMounted(() => {
             
         </section>
     </section>
+    <Footer/>
 </template>
 
 <style>
