@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import Navbar from '../../layouts/Navbar.vue';
+
+</script>
+
 <template>
-    oi
+    <Navbar/>
+    e
 </template>
