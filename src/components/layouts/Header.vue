@@ -1,7 +1,19 @@
 <script setup lang="ts">
+import router from '../../router';
+import { logout } from '../../services/AuthService';
+
     defineProps<{
     title: string
     }>()
+
+    async function handleLogout() {
+    try {
+        await logout()
+        router.push('/login')
+    } catch (error) {
+        alert('Erro ao sair. Tente novamente.')
+    }
+    }
 </script>
 
 <template>
@@ -14,7 +26,7 @@
                 <h1>{{title}}</h1>
             </div>
             <div class="logout_btn_area">
-                <button class="logout_btn">
+                <button class="logout_btn" @click="handleLogout">
                     <img src="../../assets/icons/logout.svg" alt="logout">
                     <p>Sair</p>
                 </button>
@@ -31,6 +43,7 @@
         padding: 30px 135px;
         background: #F6F6FA;
         box-shadow: 0px 8px 30px -8px rgba(29, 29, 38, 0.2);
+        margin-bottom: 40px;
 
     }
     header h1{
