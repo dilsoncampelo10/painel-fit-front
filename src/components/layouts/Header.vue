@@ -20,7 +20,7 @@ import { logout } from '../../services/AuthService';
     <header>
         <section class="container">
             <div>
-                <img src="../../assets/images/logo.png" alt="logo Always Fit">
+                <RouterLink to="/"><img src="../../assets/images/logo.png" alt="logo Always Fit"></RouterLink>
             </div>
             <div>
                 <h1>{{title}}</h1>

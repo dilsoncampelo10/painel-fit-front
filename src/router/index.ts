@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginPage from '../components/pages/auth/LoginPage.vue'
 import Dashboard from '../components/pages/Dashboard.vue'
+import Training from '../components/pages/training/Training.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,6 +17,12 @@ const router = createRouter({
       name: 'login',
       component: LoginPage,
     },
+    {
+        path: '/treinos',
+        name: 'training',
+        component: Training,
+        meta: { requiresAuth: true }
+      },
    
   ],
 })

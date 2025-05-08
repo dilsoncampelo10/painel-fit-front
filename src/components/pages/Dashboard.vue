@@ -30,8 +30,8 @@ onMounted(() => {
 
         <section class="container box_fit card_area">
             <CardFit title="Treinos concluídos / Semana" :number="3"/>
-            <CardFit title="Treinos concluídos / Semana" :number="5"/>
-            <CardFit title="Treinos concluídos / Semana" :number="2"/>
+            <CardFit title="Treinos disponíveis" :number="5"/>
+            <CardFit title="Treinos disponíveis" :number="2"/>
             
         </section>
     </section>
