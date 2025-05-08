@@ -11,11 +11,11 @@ const checked = ref(false)
 <template>
   <input
     type="checkbox"
-    :id="id"
+    :id="'switch_'+id"
     class="input_switch"
     v-model="checked"
   />
-  <label :for="id" class="switch" :class="{ active: checked }">
+  <label :for="'switch_'+id" class="switch" :class="{ active: checked }">
     <span class="slider" :class="{ active: checked }"></span>
   </label>
 </template>

@@ -1,16 +1,20 @@
 <script setup lang="ts">
+import type { Training } from '../../../types/Training';
 import Switch from '../Input/Switch.vue';
 
+defineProps<{
+    training: Training
+}>()
 
 
 </script>
 
 <template>
     <div class="training_card">
-        <h3>Supino Reto</h3>
+        <h3>{{training.exercise}}</h3>
         <img class="img_card" src="../../../assets/images/trainingMan.png" alt="imagem">
         <div class="switch_area"><label>Realizado? </label> 
-        <Switch id="s"/>
+        <Switch :id="training.id.toString()"/>
         
         </div>
         <div>
