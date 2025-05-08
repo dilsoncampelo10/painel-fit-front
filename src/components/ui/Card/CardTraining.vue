@@ -19,7 +19,7 @@ defineProps<{
         </div>
         <div>
             <p>Meta</p>
-            <div></div>
+            <div class="progress"></div>
             <a href="" class="training_details">Datalhes</a>
         </div>
     </div>
@@ -70,6 +70,15 @@ defineProps<{
         display: flex;
         justify-content: space-around;
         width: 50%;
+   }
+   .progress{
+    height: 27px;
+    background: #047857;
+
+    margin: 10px 0;
+
+    border-radius: 8px;
+
    }
 
 </style>
