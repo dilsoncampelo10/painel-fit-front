@@ -1,5 +1,49 @@
-# Vue 3 + TypeScript + Vite
+# Painel FIT Back
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Front-end que consome a API do painel-fit-back, trata-se de uma aplicação VUE, com autenticação de usuários e gerenciamento de treinos, planos nutricionais e verificação de progresso.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+---
+## Screenshots
+
+![App Screenshot](docs/screenshots/login.png)
+
+![App Screenshot](docs/screenshots/dashboard.png)
+
+![App Screenshot](docs/screenshots/treinos.png)
+
+## Funcionalidades
+
+-   Autenticação de Usuários com Sanctum
+-   Gerenciamento de Treinos (CRUD)
+-   Gerenciamento de planos nutricionais
+
+
+## 🚀 Tecnologias
+
+- Node 20+
+- VUE
+- TypeScript
+- Axios
+- VUE Router
+
+---
+
+## 🛠️ Instalação
+
+> Requisitos: Node instalado
+
+```bash
+    git clone https://github.com/dilsoncampelo10/painel-fit-front
+    cd painel-fit-front
+
+    npm install
+    npm run dev
+```
+
+
+
+### A fazer:
+- [ ] Testes de unidade
+- [ ] Tela de planos nutricionais
+- [ ] Tela de progresso
+- [ ] Tela para cadastros
